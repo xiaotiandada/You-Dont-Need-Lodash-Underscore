@@ -21,5 +21,20 @@
   console.log(difference(arrays))
 }
 
-// 截止
-// https://github.com/xiaotiandada/You-Dont-Need-Lodash-Underscore#_first
+
+{
+  const flattenDeep = arr => Array.isArray(arr) ? arr.reduce((a, b) => a.concat(flattenDeep(b)), []) : [arr]
+
+  console.log(flattenDeep([1, [[2], [3, 4]], 5]))
+}
+
+{
+  // flat
+
+  const flattenDeep = arr => arr.flatMap(subArray => Array.isArray(subArray) ? flattenDeep(subArray) : subArray)
+
+  console.log(flattenDeep([1, [[2], [3, 4]], 5]))
+
+}
+
+// https://github.com/xiaotiandada/You-Dont-Need-Lodash-Underscore#_intersection
