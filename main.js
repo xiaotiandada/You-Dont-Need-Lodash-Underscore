@@ -37,4 +37,12 @@
 
 }
 
-// https://github.com/xiaotiandada/You-Dont-Need-Lodash-Underscore#_intersection
+{
+  let arrays = [[1, 2, 3], [101, 2, 1, 10], [2, 1]];
+  
+  const intersection = array => array.reduce((a, b) => a.filter((c => b.includes(c))))
+
+  console.log(intersection(arrays))
+}
+
+// https://github.com/xiaotiandada/You-Dont-Need-Lodash-Underscore#_groupby
