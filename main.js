@@ -52,4 +52,10 @@
   console.log(grouped(array))
 }
 
-// https://github.com/xiaotiandada/You-Dont-Need-Lodash-Underscore#_keyby
+
+{
+  const keyBy = (array, key) => (array || []).reduce((r, x) => ({ ...r, [key ? x[key] : x] : x}), {})
+  console.log(keyBy([{ id: 'a1', title: 'abc' }, { id: 'b2', title: 'def' }], 'id'))
+}
+
+// https://github.com/xiaotiandada/You-Dont-Need-Lodash-Underscore#_sortby-and-_orderby
