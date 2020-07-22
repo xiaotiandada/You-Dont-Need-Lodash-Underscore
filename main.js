@@ -45,4 +45,11 @@
   console.log(intersection(arrays))
 }
 
-// https://github.com/xiaotiandada/You-Dont-Need-Lodash-Underscore#_groupby
+{
+  let array = ['one', 'two', 'three']
+  const grouped = arrary => arrary.reduce((r, v, i, a, k = v.length) => ((r[k] || (r[k] = [])).push(v), r), {})
+
+  console.log(grouped(array))
+}
+
+// https://github.com/xiaotiandada/You-Dont-Need-Lodash-Underscore#_keyby
