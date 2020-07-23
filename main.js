@@ -58,4 +58,19 @@
   console.log(keyBy([{ id: 'a1', title: 'abc' }, { id: 'b2', title: 'def' }], 'id'))
 }
 
-// https://github.com/xiaotiandada/You-Dont-Need-Lodash-Underscore#_sortby-and-_orderby
+{
+  const fruits = [
+    {name:"banana", amount: 2},
+    {name:"apple", amount: 4},
+    {name:"pineapple", amount: 2},
+    {name:"mango", amount: 1}
+  ];
+
+  const sortBy = key => (a, b) => (a[key] > b[key] ? 1 : ((b[key] > a[key]) ? -1 : 0))
+  let sortArr = fruits.concat().sort(sortBy('name'))
+  console.log('sortArr', sortArr)
+
+  console.log('sortArr', fruits.concat().sort(sortBy('amount')))
+}
+
+https://github.com/xiaotiandada/You-Dont-Need-Lodash-Underscore#_debounce
