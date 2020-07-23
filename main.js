@@ -73,4 +73,62 @@
   console.log('sortArr', fruits.concat().sort(sortBy('amount')))
 }
 
-https://github.com/xiaotiandada/You-Dont-Need-Lodash-Underscore#_debounce
+
+{
+  function debounce(func, wait, immediate) {
+    let timeout = null
+    return function() {
+    let args = arguments
+      let context = this
+      clearTimeout(timeout)
+      timeout = null
+      timeout = setTimeout(function() {
+        if (!immediate) {
+          func.apply(context, args)
+        }
+      }, wait)
+      if (immediate && !timeout) {
+        func.apply(context, args)
+      }
+    }
+  }
+
+  const show = () => console.log('scrollTop', document.body.scrollTop || document.documentElement.scrollTop)
+
+  // window.addEventListener('scroll', debounce(show, 150))
+}
+
+{
+  function throttle (func, timeFrame) {
+    let lastTime = 0
+    return function() {
+      let now = Date.now()
+      if (now - lastTime >= timeFrame) {
+        func()
+        lastTime = now
+      }
+    }
+  }
+  const show = () => console.log('scrollTop', document.body.scrollTop || document.documentElement.scrollTop)
+
+  // window.addEventListener('scroll', throttle(show, 150))
+
+}
+
+{
+  const isEmpty = obj => [Object, Array].includes((obj || {}).constructor) && !Object.entries((obj || {})).length
+
+  console.log(isEmpty(null))
+  // output: true
+  console.log(isEmpty(''))
+  // output: true
+  console.log(isEmpty({}))
+  // output: true
+  console.log(isEmpty([]))
+  // output: true
+  console.log(isEmpty({a: '1'}))
+  // output: false
+  console.log(isEmpty(undefined))
+
+}
+// https://github.com/xiaotiandada/You-Dont-Need-Lodash-Underscore#_assign
