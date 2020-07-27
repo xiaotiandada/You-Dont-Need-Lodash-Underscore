@@ -2,6 +2,8 @@
 [![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/you-dont-need/lodash-underscore)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/cht8687/You-Dont-Need-Lodash-Underscore)
 
+这是一个非常优秀的开源项目 自己阅读 **Code** 来学习 遇到无法一下就看明白的 **Code** 在 ``main.js`` 里面运行了一次 有 ``debounce`` ``throttle`` 用到了 **Browser** 环境 代码在 ``index.html``里面 🎉🎉🎉
+
 Lodash and Underscore are great modern JavaScript utility libraries, and they are widely used by Front-end developers. However, when you are targeting modern browsers, you may find out that there are many methods which are already supported natively thanks to ECMAScript5 [ES5] and ECMAScript2015 [ES6]. If you want your project to require fewer dependencies, and you know your target browser clearly, then you may not need Lodash/Underscore.
 
 You are welcome to contribute with more items provided below.
