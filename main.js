@@ -131,4 +131,18 @@
   console.log(isEmpty(undefined))
 
 }
-// https://github.com/xiaotiandada/You-Dont-Need-Lodash-Underscore#_assign
+
+{
+  const get = (obj, path, defaultValue = undefined) => {
+    const traval = regexp => String.prototype.split
+        .call(path, regexp)
+        .filter(Boolean)
+        .reduce((res, key) => (res !== null && res !== undefined ? res[key] : res), obj)
+
+    const result = traval(/[,[\]]+?/) || traval(/[,[\].]+?/)
+    return result === undefined || result === obj ? defaultValue : result
+  }
+  var object = { a: [{ b: { c: 3 } }] };
+  var result = get(object, 'a[0].b.c', 1);
+  console.log('result', result)
+}
